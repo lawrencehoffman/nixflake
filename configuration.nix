@@ -72,6 +72,7 @@
     isNormalUser = true;
     description = "Lawrence";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
       killall
