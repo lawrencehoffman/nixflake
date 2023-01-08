@@ -28,12 +28,23 @@
     ];
   };
 
+
+  #############################################################################
+  ## Shell Configuration
+
   # ZSH
   programs.zsh = {
     enable = true;
+    dotDir = ".config/zsh";
     shellAliases = {
       ll = "ls -l";
     };
+    
+    initExtra = '' 
+      source "$(fzf-share)/key-bindings.zsh"
+      source "$(fzf-share)/completion.zsh"
+    '';
+
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
@@ -46,10 +57,18 @@
     };
   };
 
+  # FZF
+  programs.fzf = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
+
   home.packages = with pkgs; [
     htop
     git
     fossil
+    fzf
   ];
 
 
