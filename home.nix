@@ -18,7 +18,7 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
+  programs._1password-gui.enable = true;
   # Neovim
   programs.neovim = {
     enable = true;
@@ -28,6 +28,7 @@
     ];
   };
 
+  programs.brave.enable = true;
 
   #############################################################################
   ## Shell Configuration
