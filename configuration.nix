@@ -96,6 +96,11 @@
     fossil
     inkscape
     virtualbox
+    gcc
+    ncurses5
+    bc
+    libressl
+    nvidia-vaapi-driver
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
