@@ -18,7 +18,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  programs._1password-gui.enable = true;
   # Neovim
   programs.neovim = {
     enable = true;
@@ -27,8 +26,6 @@
       pkgs.vimPlugins.vim-nix
     ];
   };
-
-  programs.brave.enable = true;
 
   #############################################################################
   ## Shell Configuration
@@ -70,6 +67,7 @@
     git
     fossil
     fzf
+    tmux
   ];
 
 
